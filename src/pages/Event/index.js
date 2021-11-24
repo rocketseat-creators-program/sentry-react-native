@@ -1,17 +1,17 @@
 import React from 'react';
 import {useRoute} from '@react-navigation/native';
 import {Text, ScrollView, View, ImageBackground} from 'react-native';
-
-import style from './style';
+import {useSelector} from 'react-redux';
 
 import EventItem from '../../components/EventItem';
 import Button from '../../components/Button';
 
 import gradientBackground from '../../assets/gradient-bg.png';
+import style from './style';
 
 export default EventPage = () => {
+  //const { event } = useSelector(state => state.event)
   const route = useRoute();
-
   const {event} = route.params;
 
   return (
